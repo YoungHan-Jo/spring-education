@@ -1648,3 +1648,15 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:22:44.300
 !MESSAGE executing callback sts4.classpath.MAGKeBxV SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:51:53.310
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MAGKeBxV
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:51:53.312
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.MAGKeBxV
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:51:53.313
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-11-29 21:51:53.314
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MAGKeBxV => OK
