@@ -6,12 +6,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.domain.MemberVO;
+import com.example.service.MemberService;
 
 @Controller
 @RequestMapping("/member/*")
 public class MemberController {
+
+	private MemberService memberService;
 	
 	
+	
+	public MemberController(MemberService memberService) {
+		super();
+		this.memberService = memberService;
+	}
 
 	@GetMapping("/login") //   /member/login
 	public String loginForm() {
@@ -33,10 +41,13 @@ public class MemberController {
 		System.out.println("memberVO : " + memberVO);
 		
 		
+		memberService.addMember(memberVO);
+		
+		System.out.println("회원가입 완료");
 		
 		
 		
-		return "member/login"; // 회원가입 완료 후 index 화면으로
+		return "member/login"; // 회원가입 완료 후 로그인 화면으로
 	}
 	
 }
