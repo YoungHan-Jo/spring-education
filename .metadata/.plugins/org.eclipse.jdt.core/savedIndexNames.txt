@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\°Å´Ï\Desktop\spring-education\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3754403755.index
+2270588913.index

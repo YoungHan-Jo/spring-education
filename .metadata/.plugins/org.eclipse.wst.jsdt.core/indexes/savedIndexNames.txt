@@ -1,0 +1,2 @@
+INDEX VERSION 1.4+C:\Users\°Å´Ï\Desktop\spring-education\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2335480856.index
