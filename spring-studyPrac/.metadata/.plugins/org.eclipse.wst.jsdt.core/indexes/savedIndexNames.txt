@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INDEX VERSION 1.4+C:\Users\YoungHan-Jo\Desktop\spring-education\spring-studyPrac\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
 3733663197.index
 2656362571.index
@@ -5,4 +6,11 @@ INDEX VERSION 1.4+C:\Users\YoungHan-Jo\Desktop\spring-education\spring-studyPrac
 3766049740.index
 3470694712.index
 587770739.index
+=======
+INDEX VERSION 1.4+C:\Users\°Å´Ï\Desktop\spring-education\spring-studyPrac\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1804556719.index
+3976954699.index
+3467495003.index
+3066672396.index
+>>>>>>> 3cfaf8d445bee08bf92294da768e7f0d463fdea3
 845247940.index
