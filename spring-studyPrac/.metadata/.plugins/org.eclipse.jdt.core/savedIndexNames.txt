@@ -21,7 +21,6 @@ INDEX VERSION 1.131+C:\Users\YoungHan-Jo\Desktop\spring-education\spring-studyPr
 3354990209.index
 3585192375.index
 578362642.index
-4166552130.index
 1176076454.index
 3444335387.index
 3473003509.index
