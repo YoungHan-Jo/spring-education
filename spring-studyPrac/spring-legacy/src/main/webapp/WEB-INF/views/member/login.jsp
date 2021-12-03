@@ -15,7 +15,7 @@
 <button onclick="location.href='/'">메인으로 돌아가기</button>
 
 
-<form action="" method="POST">
+<form action="/member/login" method="POST">
 
 <label>아이디</label>
 <input type="text" name="id" />

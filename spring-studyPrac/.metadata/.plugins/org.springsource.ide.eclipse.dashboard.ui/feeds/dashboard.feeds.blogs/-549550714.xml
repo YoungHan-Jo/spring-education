@@ -33,7 +33,7 @@
       <name>Spencer Gibb</name>
     </author>
     <id>tag:spring.io,2021-12-02:4630</id>
-    <updated>2021-12-02T21:45:13Z</updated>
+    <updated>2021-12-02T21:45:00Z</updated>
     <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce the General Availability of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud 2021.0&lt;/a&gt; Release Train, codename Jubilee, is available today. The release can be found in &lt;a href="https://repo1.maven.org/maven2/org/springframework/cloud/spring-cloud-dependencies/2021.0.0/"&gt;Maven Central&lt;/a&gt;. You can check out the 2021.0 &lt;a href="https://github.com/spring-cloud/spring-cloud-release/wiki/Spring-Cloud-2021.0-Release-Notes"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-the-2021-0-release-train" class="anchor" name="notable-changes-in-the-2021-0-release-train"&gt;&lt;/a&gt;Notable Changes in the 2021.0 Release Train&lt;/h2&gt;
 &lt;p&gt;2021.0.0 is compatible with Spring Boot 2.6.1&lt;/p&gt;
 &lt;p&gt;See &lt;a href="https://github.com/orgs/spring-cloud/projects/59"&gt;the project page&lt;/a&gt; for all the issues and pull requests included in this release.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
@@ -42,6 +42,9 @@
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-config" class="anchor" name="spring-cloud-config"&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Integration with AWS Secrets Manager, AWS Parameter Store and GCP Secret Manager.&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-function" class="anchor" name="spring-cloud-function"&gt;&lt;/a&gt;Spring Cloud Function&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support for gRPC, FunctionCatalog via actuator endpoint, AWS improvements, CloudEvents etc. You can read more in &lt;a href="https://spring.io/blog/2021/12/02/spring-cloud-function-3-2-is-out"&gt;this blog post&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-gateway" class="anchor" name="spring-cloud-gateway"&gt;&lt;/a&gt;Spring Cloud Gateway&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Redis Route Repository&lt;/li&gt;
@@ -56,6 +59,9 @@
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-sleuth" class="anchor" name="spring-cloud-sleuth"&gt;&lt;/a&gt;Spring Cloud Sleuth&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Instrumentation for Tomcat, Spring Vault, R2DBC, JDBC, Spring Cloud Deployer, Spring Cloud Skipper, Reactor Kafka, Spring TX, Spring Batch, RSocket, Spring Cloud Task, Spring Cloud Config, Kotlin Coroutines, and more.&lt;/li&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-stream" class="anchor" name="spring-cloud-stream"&gt;&lt;/a&gt;Spring Cloud Stream&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;About 100 issues have been resolved for this release between &lt;a href="https://github.com/spring-cloud/spring-cloud-stream/milestone/82?closed=1"&gt;core&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-kafka/issues?q=is%3Aissue+milestone%3A3.2.0+is%3Aclosed"&gt;Kafka&lt;/a&gt; and &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-rabbit/milestone/51?closed=1"&gt;Rabbit&lt;/a&gt; binders.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The following modules were updated as part of 2021.0.0:&lt;/p&gt;
 &lt;table&gt;
@@ -126,6 +132,16 @@
       &lt;td&gt;Spring Cloud Consul &lt;/td&gt;
       &lt;td&gt;3.1.0 &lt;/td&gt;
       &lt;td&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Function &lt;/td&gt;
+      &lt;td&gt;3.2.1 &lt;/td&gt;
+      &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-function/milestone/37?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Spring Cloud Stream &lt;/td&gt;
+      &lt;td&gt;3.2.1 &lt;/td&gt;
+      &lt;td&gt;see above for the list of issues&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;Spring Cloud Gateway &lt;/td&gt;
@@ -209,7 +225,7 @@ dependencyManagement {&#xD;
     </author>
     <id>tag:spring.io,2021-12-02:4629</id>
     <updated>2021-12-02T18:54:00Z</updated>
-    <content type="html">&lt;p&gt;Spring Cloud 2021.0.0 is finally out (separate blog post is imminent) and with it you have Spring Cloud Function 3.2&lt;/p&gt;
+    <content type="html">&lt;p&gt;Spring Cloud &lt;a href="https://spring.io/blog/2021/12/02/spring-cloud-2021-0-0-codename-jubilee-has-been-released"&gt;2021.0.0 is finally out&lt;/a&gt; and with it you have Spring Cloud Function 3.2&lt;/p&gt;
 &lt;p&gt;While the full list of features, enhancements and bug fixes is available &lt;a href="https://github.com/spring-cloud/spring-cloud-function/milestone/37?closed=1"&gt;here&lt;/a&gt;, I¡¯d like to call out few of them in this post and provide some details.&lt;/p&gt;&lt;h2&gt;&lt;a href="#grpc-support" class="anchor" name="grpc-support"&gt;&lt;/a&gt;gRPC Support&lt;/h2&gt;
 &lt;p&gt;In addition to an already existing support for invoking function via &lt;a href="https://docs.spring.io/spring-cloud-function/docs/3.2.1/reference/html/aws.html"&gt;AWS Lambda&lt;/a&gt;, &lt;a href="https://github.com/spring-cloud/spring-cloud-function/tree/main/spring-cloud-function-rsocket"&gt;RSocket&lt;/a&gt;, &lt;a href="https://docs.spring.io/spring-cloud-stream/docs/3.2.1/reference/html/"&gt;Spring Cloud Stream&lt;/a&gt; etc., Spring Cloud Function now allows you to invoke function via &lt;a href="https://grpc.io/"&gt;gRPC&lt;/a&gt;.&lt;br/&gt;Two ways to benefit from it. &lt;/p&gt;&lt;h4&gt;&lt;a href="#em-spring-message-em" class="anchor" name="em-spring-message-em"&gt;&lt;/a&gt;&lt;em&gt;Spring Message&lt;/em&gt;&lt;/h4&gt;
 &lt;p&gt;Given the wide adaption of &lt;em&gt;Spring Messaging&lt;/em&gt;, one way of benefiting from gRPC support is by embracing Spring&amp;rsquo;s &lt;code&gt;Message&lt;/code&gt;.&lt;br/&gt;Spring Cloud Function provides &lt;code&gt;GrpcSpringMessage&lt;/code&gt; schema modeled after Spring&amp;rsquo;s &lt;a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/messaging/Message.html"&gt;Message&lt;/a&gt;. It is internally converted to Spring Message to benefit from all of the existing support for &lt;em&gt;Spring Messaging&lt;/em&gt;. &lt;/p&gt;
