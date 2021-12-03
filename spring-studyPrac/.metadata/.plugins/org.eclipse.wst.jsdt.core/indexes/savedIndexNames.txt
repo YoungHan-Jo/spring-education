@@ -1,7 +1,6 @@
-INDEX VERSION 1.4+C:\Users\YoungHan-Jo\Desktop\spring-education\spring-studyPrac\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3470694712.index
-3766049740.index
+INDEX VERSION 1.4+C:\Users\°Å´Ï\Desktop\spring-education\spring-studyPrac\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1804556719.index
+3976954699.index
+3467495003.index
+3066672396.index
 845247940.index
-2656362571.index
-3733663197.index
-2191598513.index
