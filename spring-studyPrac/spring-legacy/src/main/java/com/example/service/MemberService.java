@@ -17,6 +17,10 @@ public class MemberService {
 		memberMapper.addMember(memberVO);
 	}
 	
+	public int getCountById(String id) {
+		
+		return memberMapper.getCountById(id);
+	}
 	
 	
 }

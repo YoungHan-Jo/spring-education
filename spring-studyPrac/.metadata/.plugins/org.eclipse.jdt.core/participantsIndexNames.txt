@@ -1,5 +1,3 @@
 INDEX VERSION 1.131
-C:\Users\거니\Desktop\spring-education\spring-studyPrac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3766049740.index
-\spring-legacy\src\main\java
-C:\Users\거니\Desktop\spring-education\spring-studyPrac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1540295956.index
+C:\Users\YoungHan-Jo\Desktop\spring-education\spring-studyPrac\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3766049740.index
 \spring-legacy\src\main\java
