@@ -20,9 +20,9 @@
 		<item value="org.eclipse.jgit:5.13.0.202109080827-r"/>
 		<item value="org.eclipse.jst.common.fproj.enablement.jdt:3.23.0.v202108200205"/>
 		<item value="org.eclipse.jst.enterprise_ui.feature:3.23.0.v202107101916"/>
-		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:16.0.2.v20210721-1149"/>
-		<item value="org.eclipse.m2e.feature:1.18.1.20210618-2246"/>
-		<item value="org.eclipse.m2e.logback.feature:1.17.1.20210603-1006"/>
+		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:17.0.0.v20211012-1059"/>
+		<item value="org.eclipse.m2e.feature:1.18.2.20211011-2139"/>
+		<item value="org.eclipse.m2e.logback.feature:1.17.2.20211002-1029"/>
 		<item value="org.eclipse.m2e.wtp.feature:1.4.4.20201128-1705"/>
 		<item value="org.eclipse.mylyn.commons.identity:1.17.2.v20200813-0821"/>
 		<item value="org.eclipse.mylyn.commons.notifications:1.17.2.v20200813-0821"/>
@@ -35,7 +35,7 @@
 		<item value="org.eclipse.mylyn.monitor:3.25.2.v20200813-0821"/>
 		<item value="org.eclipse.mylyn.tasks.ide:3.25.2.v20200814-0512"/>
 		<item value="org.eclipse.mylyn.team_feature:3.25.2.v20200828-1617"/>
-		<item value="org.eclipse.mylyn.wikitext.editors_feature:3.0.39.202102270010"/>
+		<item value="org.eclipse.mylyn.wikitext.editors_feature:3.0.40.202110140008"/>
 		<item value="org.eclipse.mylyn_feature:3.25.2.v20200814-0512"/>
 		<item value="org.eclipse.pde:3.14.900.v20210906-0500"/>
 		<item value="org.eclipse.platform:4.21.0.v20210906-0842"/>
@@ -56,19 +56,19 @@
 		<item value="org.sonatype.m2e.buildhelper.feature:0.15.0.201207090124"/>
 		<item value="org.sonatype.m2e.egit.feature:0.15.1.201806191431"/>
 		<item value="org.sonatype.m2e.mavenarchiver.feature:0.17.5.202002191804"/>
-		<item value="org.springframework.ide.eclipse.ajdt.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.aop.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.autowire.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.batch.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.boot.dash.feature:4.12.0.202109130635"/>
-		<item value="org.springframework.ide.eclipse.data.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.integration.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.maven.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.mylyn.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.security.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.webflow.feature:3.9.18.202109140629-RELEASE"/>
-		<item value="org.springframework.ide.eclipse.xml.namespaces.feature:4.12.0.202109130635"/>
+		<item value="org.springframework.ide.eclipse.ajdt.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.aop.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.autowire.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.batch.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.boot.dash.feature:4.12.1.202110260750"/>
+		<item value="org.springframework.ide.eclipse.data.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.integration.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.maven.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.mylyn.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.security.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.webflow.feature:3.9.19.202111011623-CI-B2841"/>
+		<item value="org.springframework.ide.eclipse.xml.namespaces.feature:4.12.1.202110260750"/>
 	</list>
 	<section name="CleanDialogSettings">
 		<item key="TOGGLE_SELECTED" value="false"/>
