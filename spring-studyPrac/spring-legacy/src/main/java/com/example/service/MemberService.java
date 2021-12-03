@@ -22,9 +22,14 @@ public class MemberService {
 	public void addMember(MemberVO memberVO) {
 		
 		memberMapper.addMember(memberVO);
-		
 	}
 	
+	public int getCountById(String id) {
 	
+		int count = memberMapper.getCountById(id);
+		
+		return count;
+	}
+
 	
 }

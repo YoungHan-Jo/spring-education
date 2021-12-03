@@ -11,6 +11,14 @@
 			VALUES (#{id}, #{passwd}, #{name}, #{birthday}, 
 					#{gender}, #{email}, #{recvEmail}, #{regDate})
 		]]>
-	</insert> 
+	</insert>
+
+	<select id="getCountById" resultType="int">
+		<![CDATA[
+			SELECT COUNT(*)
+			FROM member
+			WHERE id = #{id};
+		]]>
+	</select>
 
 </mapper>
