@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\거니\Desktop\spring-education\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3282526220.index
-\myapp\src\main\java
-C:\Users\거니\Desktop\spring-education\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3936028158.index
-\myapp\src\main\java
