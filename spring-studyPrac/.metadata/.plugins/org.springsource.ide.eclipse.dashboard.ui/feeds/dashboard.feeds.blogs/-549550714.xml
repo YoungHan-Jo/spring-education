@@ -38,7 +38,7 @@
 &lt;p&gt;2021.0.0 is compatible with Spring Boot 2.6.1&lt;/p&gt;
 &lt;p&gt;See &lt;a href="https://github.com/orgs/spring-cloud/projects/59"&gt;the project page&lt;/a&gt; for all the issues and pull requests included in this release.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-cloud-commons" class="anchor" name="spring-cloud-commons"&gt;&lt;/a&gt;Spring Cloud Commons&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;Support for per Load-balancer configuration properties (added as well to Gateway, Contract and Openfeign).&lt;/li&gt;
+  &lt;li&gt;Support for per LoadBalancer configuration properties (added as well to Gateway, Contract and OpenFeign).&lt;/li&gt;
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-config" class="anchor" name="spring-cloud-config"&gt;&lt;/a&gt;Spring Cloud Config&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Integration with AWS Secrets Manager, AWS Parameter Store and GCP Secret Manager.&lt;/li&gt;
@@ -53,7 +53,7 @@
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-kubernetes" class="anchor" name="spring-cloud-kubernetes"&gt;&lt;/a&gt;Spring Cloud Kubernetes&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Config Server and Discovery Controllers&lt;/li&gt;
-&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-openfeign" class="anchor" name="spring-cloud-openfeign"&gt;&lt;/a&gt;Spring Cloud Openfeign&lt;/h3&gt;
+&lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-openfeign" class="anchor" name="spring-cloud-openfeign"&gt;&lt;/a&gt;Spring Cloud OpenFeign&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;Support for &lt;code&gt;@Cachable&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;h3&gt;&lt;a href="#spring-cloud-sleuth" class="anchor" name="spring-cloud-sleuth"&gt;&lt;/a&gt;Spring Cloud Sleuth&lt;/h3&gt;
@@ -109,7 +109,7 @@
       &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-kubernetes/milestone/38?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Spring Cloud Openfeign &lt;/td&gt;
+      &lt;td&gt;Spring Cloud OpenFeign &lt;/td&gt;
       &lt;td&gt;3.1.0 &lt;/td&gt;
       &lt;td&gt;(&lt;a href="https://github.com/spring-cloud/spring-cloud-openfeign/milestone/47?closed=1"&gt;issues&lt;/a&gt;)&lt;/td&gt;
     &lt;/tr&gt;
