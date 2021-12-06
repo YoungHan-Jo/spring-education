@@ -9,7 +9,6 @@ INDEX VERSION 1.131+C:\Users\°Å´Ï\Desktop\spring-education\spring-studyPrac\.met
 1274339069.index
 2594986717.index
 3842056686.index
-845247940.index
 2173961166.index
 3238264615.index
 3950441316.index
