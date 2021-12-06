@@ -18,8 +18,11 @@ public class MemberService {
 	}
 	
 	public int getCountById(String id) {
-		
 		return memberMapper.getCountById(id);
+	}
+	
+	public MemberVO getMemberById(String id) {
+		return memberMapper.getMemberById(id);
 	}
 	
 }

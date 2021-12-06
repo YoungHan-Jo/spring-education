@@ -9,4 +9,10 @@ public interface MemberMapper {
 	
 	// DB에 해당하는 아이디 개수 받아오기
 	int getCountById(String id);
+	
+	// id에 해당하는 MemberVO 객체 가져오기
+	MemberVO getMemberById(String id);
+	
+	
+	
 }

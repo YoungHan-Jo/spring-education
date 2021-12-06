@@ -1,5 +1,7 @@
 package com.example.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,7 +34,8 @@ public class MemberController {
 	}
 
 	@PostMapping("/login")
-	public ResponseEntity<String> login(String id, String passwd) {
+	public ResponseEntity<String> login(String id, String passwd,
+			HttpSession session) {
 
 		// === 아이디 존재여부 체크 ===
 		int count = memberService.getCountById(id);
@@ -48,11 +51,28 @@ public class MemberController {
 		}
 
 		// === 비밀번호 체크 ===
-		
-		
-		
-		
+		MemberVO memberVO = memberService.getMemberById(id);
+		System.out.println("memberVO : " + memberVO);
+		String realPasswd = memberVO.getPasswd();
+
+		if (passwd.equals(realPasswd) == false) {
+			// 선물상자 대가리!
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Content-Type", "text/html; charset=UTF-8");
+
+			String str = JScript.back("비밀번호가 틀렸습니다.");
+
+			return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+		}
+
 		// === 아이디 비밀번호 일치 시 로그인 ===
+		// 세션 등록
+		session.setAttribute("id", id);
+		
+		// 로그인상태유지
+		// 쿠키 등록
+		
+		
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "text/html; charset=UTF-8");
 
