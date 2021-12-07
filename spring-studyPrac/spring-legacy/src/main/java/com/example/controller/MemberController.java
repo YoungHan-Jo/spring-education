@@ -1,5 +1,12 @@
 package com.example.controller;
 
+import java.util.Iterator;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -33,7 +40,9 @@ public class MemberController {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<String> login(String id, String passwd) {
+	public ResponseEntity<String> login(String id, String passwd,
+			HttpSession session, boolean rememberMe, 
+			HttpServletResponse response) {
 		
 		// ====== 아이디 존재여부 체크 ======
 		int count = memberService.getCountById(id);
@@ -46,19 +55,34 @@ public class MemberController {
 			
 			return new ResponseEntity<String>(str, headers, HttpStatus.OK);
 		}
-		
-		
 		// ====== 비밀번호 체크 ======
+		MemberVO memberVO = memberService.getMemberById(id);
+		String realPasswd = memberVO.getPasswd();
 		
-		
-		
-		
-		
-		
-		
+		if(passwd.equals(realPasswd) == false) { // 비밀번호 일치하지 않음
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Content-Type", "text/html; charset=UTF-8");
+			
+			String str = JScript.back("비밀번호가 틀렸습니다.");
+			
+			return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+		}
 		
 		
 		// ==== 아이디 비밀번호 일치 시 로그인 ====
+		// 세션 등록
+		session.setAttribute("id", id);
+		
+		System.out.println("session.id : " + session.getAttribute("id"));
+		
+		if(rememberMe == true) { // 로그인유지 체크 함
+			//쿠키 등록하기
+			Cookie cookie = new Cookie("userId", id); // 쿠키 생성
+			cookie.setMaxAge(60*60*24*7); // 쿠키 수명 설정
+			cookie.setPath("/"); // 쿠키 적용 경로 설정 , "/" <-는 모든 경로
+			response.addCookie(cookie); // response에 쿠키 싣기
+		}
+		
 		HttpHeaders headers = new HttpHeaders();
 		headers.add("Content-Type", "text/html; charset=UTF-8");
 		
@@ -83,6 +107,31 @@ public class MemberController {
 		System.out.println("회원가입 완료");
 		
 		return "member/login"; // 회원가입 완료 후 index 화면으로
+	}
+	
+	@GetMapping("/logout")
+	public String logout(HttpSession session,
+			HttpServletRequest request, 
+			HttpServletResponse response) {
+		
+		// 세션 초기화
+		session.invalidate();
+		
+		// 쿠키 삭제
+		Cookie[] cookies = request.getCookies();
+		
+		if(cookies != null) {
+			for (Cookie cookie : cookies) {
+				if(cookie.getName().equals("userId")) {
+					// 사용자에게서 받아온 쿠키의 수명을 0으로 설정
+					cookie.setMaxAge(0);
+					cookie.setPath("/"); //쿠키 적용 경로
+					response.addCookie(cookie); // response에 쿠키 싣기
+				}
+			}
+		}
+		
+		return "redirect:/member/login";
 	}
 	
 }

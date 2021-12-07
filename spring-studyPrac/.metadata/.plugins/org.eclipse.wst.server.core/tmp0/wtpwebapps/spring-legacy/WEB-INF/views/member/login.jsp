@@ -22,6 +22,7 @@
 <input type="text" name="id" />
 <label>비밀번호</label>
 <input type="password" name="passwd" />
+<input type="checkbox" name="rememberMe" />로그인 유지
 
 <button type="submit">로그인</button>
 

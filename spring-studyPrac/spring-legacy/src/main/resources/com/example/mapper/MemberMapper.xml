@@ -17,7 +17,15 @@
    		<![CDATA[
    			SELECT COUNT(*)
 			FROM member
-			WHERE id = #{id};
+			WHERE id = #{id}
+   		]]>
+   </select>
+   
+   <select id="getMemberById" resultType="memberVO">
+   		<![CDATA[
+   			SELECT *
+   			FROM member
+   			WHERE id = #{id}
    		]]>
    </select>
 
