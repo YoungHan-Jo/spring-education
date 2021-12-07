@@ -14,6 +14,6 @@ public class MemberVO {
 	private String gender;
 	private String email;
 	private String recvEmail;
-	private Date regDate;
+	private Date   regDate;
 	
 }

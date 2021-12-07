@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page session="false" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
 
 <!DOCTYPE html>
 <html>
@@ -16,9 +16,11 @@
 
 	<form action="/member/login" method="POST">
 		<label>아이디</label>
-		<input type="text" name="id" />
+		<input type="text" name="id" /><br>
 		<label>비밀번호</label>
-		<input type="password" name="passwd" />
+		<input type="password" name="passwd" /><br>
+		
+		<input type="checkbox" name="rememberMe" />로그인 유지
 		
 		<button type="submit">로그인</button>
 	</form>
