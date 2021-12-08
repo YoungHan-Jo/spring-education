@@ -1,7 +1,0 @@
-package com.example.mapper;
-
-public interface MemberMapper {
-
-	void addMember(MemberVO memberVO);
-	
-}
