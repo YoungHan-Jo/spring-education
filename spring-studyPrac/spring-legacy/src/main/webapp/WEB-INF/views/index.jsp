@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	Hello world!
 </h1>
 
 <!-- EL언어
@@ -35,6 +35,7 @@ ${applicationScope.xxx} - 4
 <!-- else 세션에 아이디가 없다(로그아웃상태) -->
 <c:choose>
 	<c:when test="${not empty sessionScope.id}">
+		<button onclick="location.href='/member/myInfo'">내 정보</button>
 		<button onclick="location.href='/member/logout'">로그아웃</button>
 	</c:when>
 	<c:otherwise>

@@ -26,4 +26,8 @@ public class MemberService {
 		return memberMapper.getMemberById(id);
 	}
 	
+	public void modifyMember(MemberVO memberVO) {
+		memberMapper.modifyMember(memberVO);
+	}
+	
 }

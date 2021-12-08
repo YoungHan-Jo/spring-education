@@ -28,5 +28,13 @@
    			WHERE id = #{id}
    		]]>
    </select>
+   
+   <update id="modifyMember">
+   		<![CDATA[
+   			UPDATE member
+   			SET name = #{name}, email = #{email}
+   			WHERE id = #{id}
+   		]]>
+   </update>
 
 </mapper>
