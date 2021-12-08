@@ -13,7 +13,6 @@ public class MemberService {
 	private MemberMapper memberMapper;
 	
 	public void addMember(MemberVO memberVO) {
-		
 		memberMapper.addMember(memberVO);
 	}
 	
@@ -25,4 +24,7 @@ public class MemberService {
 		return memberMapper.getMemberById(id);
 	}
 	
+	public void modifyMember(MemberVO memberVO) {
+		memberMapper.addMember(memberVO);
+	}
 }

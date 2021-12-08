@@ -9,6 +9,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.domain.MemberVO;
 import com.example.service.MemberService;
 import com.example.util.JScript;
+import com.mysql.cj.Session;
 
 @Controller
 @RequestMapping("/member/*")
@@ -154,4 +156,74 @@ public class MemberController {
 		return "redirect:/member/login";
 	}
 	
+	@GetMapping("/myInfo")
+	public String myInfo(HttpSession session,
+						 Model model) {
+		// 세션에서 오브젝트를 져오는데 앞에 String써서 구체화시켜준다
+		String id = (String) session.getAttribute("id");
+		
+		System.out.println("id : " + id);
+		
+		MemberVO memberVO =  memberService.getMemberById(id);
+		
+		model.addAttribute("member", memberVO);
+		
+		return "member/myInfo";
+	}
+	
+	@GetMapping("/modify")
+	public String memberModifyForm(HttpSession session,
+			 					   Model model) {
+		String id = (String) session.getAttribute("id");
+		
+		System.out.println("id : " + id);
+		
+		MemberVO memberVO =  memberService.getMemberById(id);
+		
+		model.addAttribute("member", memberVO);
+		
+		return "member/modify";
+	}
+	
+	@PostMapping("/modify")
+	public ResponseEntity<String> memberModify(MemberVO memberVO,
+			HttpSession session) {
+		
+		System.out.println("id 추가 전 memberVO : " + memberVO);
+		
+		String id = (String) session.getAttribute("id");
+		memberVO.setId(id);
+		
+		System.out.println("id 추가 후 memberVO : " + memberVO);
+		
+		System.out.println("가져온 id : " + memberVO.getId());
+		
+		MemberVO dbMemberVO =  memberService.getMemberById(memberVO.getId());
+		
+		System.out.println("dbMemberVO : " + dbMemberVO);
+		
+		// 1.비밀번호 체크
+		String realPasswd = dbMemberVO.getPasswd();
+		if (memberVO.getPasswd().equals(realPasswd) == false) { // 비밀번호가 틀렸을 때
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Content-Type", "text/html; charset=UTF-8");
+
+			String str = JScript.back("비밀번호가 틀렸습니다.");
+
+			return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+		}
+		
+		// ====== 비밀번호 일치 ======
+		
+		// 2. DB 수정
+		memberService.modifyMember(memberVO);
+		
+		// 3.사용자에게 응답 보내기
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Content-Type", "text/html; charset=UTF-8");
+
+		String str = JScript.href("회원수정 완료", "/member/myInfo");
+
+		return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+	}
 }

@@ -38,6 +38,7 @@
 	<!-- 주석 안에다가 작성 하면 에러 뜸 거지같은 프로그램 -->
 	<c:choose>
 		<c:when test="${ not empty sessionScope.id }">
+		<button onclick="location.href='/member/myInfo'">내정보</button>
 			<button onclick="location.href='/member/logout'">로그아웃</button>
 		</c:when>
 		<c:otherwise>
