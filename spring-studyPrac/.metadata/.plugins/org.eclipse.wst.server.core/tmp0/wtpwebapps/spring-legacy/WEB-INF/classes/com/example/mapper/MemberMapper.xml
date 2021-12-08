@@ -33,7 +33,7 @@
 		<![CDATA[
 			UPDATE member
 			SET name = #{name}, email = #{email}
-			WHERE id = #{id};
+			WHERE id = #{id}
 		]]>
 	</update>
 </mapper>

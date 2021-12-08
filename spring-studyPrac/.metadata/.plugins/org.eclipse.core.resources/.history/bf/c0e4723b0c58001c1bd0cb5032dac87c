@@ -25,6 +25,6 @@ public class MemberService {
 	}
 	
 	public void modifyMember(MemberVO memberVO) {
-		memberMapper.modifyMember(memberVO);
+		memberMapper.addMember(memberVO);
 	}
 }
