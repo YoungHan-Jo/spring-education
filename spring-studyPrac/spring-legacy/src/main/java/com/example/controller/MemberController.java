@@ -46,6 +46,14 @@ public class MemberController {
 			
 			return new ResponseEntity<String>(str, headers, HttpStatus.OK);
 		}
+		
+		// === 비밀번호 체크 ===
+		
+		
+		
+		
+		
+		
 		// ====== 아이디 존재여부 체크 종료 =====
 		
 		HttpHeaders headers = new HttpHeaders();
