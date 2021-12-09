@@ -219,4 +219,83 @@ public class MemberController {
 
 		return new ResponseEntity<String>(str, headers, HttpStatus.OK);
 	}
+	
+	@GetMapping("/passwd")
+	public String passwdForm() {
+		
+		return "member/passwd";
+	}
+	
+	@PostMapping("/passwd")
+	public ResponseEntity<String> passwd(String passwd,
+			String newPasswd1, String newPasswd2,
+			HttpSession session) {
+		// 1. 현재 비밀번호가 일치하는지 체크
+		String id = (String) session.getAttribute("id");
+		MemberVO memberVO =  memberService.getMemberById(id);
+		
+		// 비밀번호가 틀렸을 때 DB를 뒤져봐야 해서 시간이 오래걸림
+		if (passwd.equals(memberVO.getPasswd()) == false) {
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Content-Type", "text/html; charset=UTF-8");
+
+			String str = JScript.back("비밀번호가 틀렸습니다.");
+
+			return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+		}
+		// 2. 새 비밀번호와 새 비밀번호확인이 일치하는지
+		if (newPasswd1.equals(newPasswd2) == false) {
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Content-Type", "text/html; charset=UTF-8");
+
+			String str = JScript.back("새 비밀번호가 서로 같지 않습니다.");
+
+			return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+		}
+		// 3. DB에 있는 비밀번호 수정
+		memberService.modifyPasswd(id, newPasswd1);
+		
+		// 4. 로그아웃 시키기
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Content-Type", "text/html; charset=UTF-8");
+
+		String str = JScript.href("비밀번호 변경 완료 다시 로그인하세요", "/member/logout");
+
+		return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+	}
+	
+	@GetMapping("/delete")
+	public String deleteMemberForm() {
+		
+		return "member/deleteMember";
+	}
+	
+	@PostMapping("/delete")
+	public ResponseEntity<String> deleteMember(
+			String passwd, HttpSession session) {
+		// 1. 비밀번호 체크
+		String id = (String) session.getAttribute("id");
+		MemberVO memberVO =  memberService.getMemberById(id);
+		
+		// 비밀번호 틀렸을 때
+		if (passwd.equals((String) memberVO.getPasswd()) == false) {
+			HttpHeaders headers = new HttpHeaders();
+			headers.add("Content-Type", "text/html; charset=UTF-8");
+
+			String str = JScript.back("비밀번호가 틀렸습니다.");
+
+			return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+		}
+		
+		// 2. 화원탈퇴 처리하기 DB에서 삭제
+		memberService.deleteMember(id);
+		
+		// 3. 로그아웃 시키기
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Content-Type", "text/html; charset=UTF-8");
+
+		String str = JScript.href("회원탈퇴 완료", "/member/logout");
+
+		return new ResponseEntity<String>(str, headers, HttpStatus.OK);
+	}
 }

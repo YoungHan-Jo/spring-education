@@ -36,4 +36,19 @@
 			WHERE id = #{id}
 		]]>
 	</update>
+	
+	<update id="modifyPasswd">
+		<![CDATA[
+			UPDATE member
+			SET passwd = #{passwd}
+			WHERE id = #{id}
+		]]>
+	</update>
+	
+	<delete id="deleteMember">
+		<![CDATA[
+			DELETE FROM member
+			WHERE id = #{id}
+		]]>
+	</delete>
 </mapper>
