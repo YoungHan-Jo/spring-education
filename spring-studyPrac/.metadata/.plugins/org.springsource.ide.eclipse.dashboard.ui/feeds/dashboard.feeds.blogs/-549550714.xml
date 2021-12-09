@@ -5,7 +5,435 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-12-07T19:00:00Z</updated>
+  <updated>2021-12-08T19:30:00Z</updated>
+  <entry>
+    <title>Spring Tools 4.13.0 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/12/08/spring-tools-4-13-0-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Martin Lippert</name>
+    </author>
+    <id>tag:spring.io,2021-12-08:4636</id>
+    <updated>2021-12-08T19:30:00Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;p&gt;I am happy to announce the 4.13.0 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;&lt;h4&gt;&lt;a href="#major-changes-to-the-spring-tools-4-for-eclipse-distribution" class="anchor" name="major-changes-to-the-spring-tools-4-for-eclipse-distribution"&gt;&lt;/a&gt;major changes to the Spring Tools 4 for Eclipse distribution&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;updated to Eclipse 2021-12 release (including support for Java 17) (&lt;a href="https://www.eclipse.org/eclipseide/2021-12/"&gt;new and noteworthy&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;builds for Apple Silicon platform (ARM M1) are available now from the regular download page&lt;/li&gt;
+&lt;/ul&gt;&lt;h4&gt;&lt;a href="#additional-changes" class="anchor" name="additional-changes"&gt;&lt;/a&gt;additional changes&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: STS 4.12.0 (for eclipse) *.yml can&amp;rsquo;t automatic prompt (&lt;a href="https://github.com/spring-projects/sts4/issues/690"&gt;#690&lt;/a&gt;)
+&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; fixed: A StackOverFlow error for serializable Kotlin data class for autocompletion in the Eclipse IDE (&lt;a href="https://github.com/spring-projects/sts4/issues/693"&gt;#693&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: Typescript comparison: An internal error occurred during: &amp;ldquo;LSP4E Linked Editing Highlight&amp;rdquo; (&lt;a href="https://github.com/spring-projects/sts4/issues/700"&gt;#700&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: js syntax highlight disabled by STS4 (&lt;a href="https://github.com/spring-projects/sts4/issues/702"&gt;#702&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; fixed: Cannot copy/paste from ANSI console without escape sequences (&lt;a href="https://github.com/spring-projects/sts4/issues/667"&gt;#667&lt;/a&gt;) - fixed in ANSI Color Console project thanks to @mihnita&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are updating an existing Spring Tools 4 installation, please make sure you to prepare your installation propertly this time: &lt;a href="https://twitter.com/springtools4/status/1468587842838355980"&gt;https://twitter.com/springtools4/status/1468587842838355980&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2021-12-08-4130-release-incl-language-servers-version-1290"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2021-12-08-4130-release-incl-language-servers-version-1290&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spring Tools 4.13.1 is scheduled to be released in early Feb 2022.&lt;/p&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Secure communications end-to-end for Spring Boot apps ? in Zero Trust environment</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/12/08/secure-communications-end-to-end-for-spring-boot-apps-in-zero-trust-environment" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-12-08:4635</id>
+    <updated>2021-12-08T18:00:00Z</updated>
+    <content type="html">&lt;h1&gt;&lt;a href="#secure-communications-end-to-end-for-spring-boot-apps-in-a-zero-trust-environment" class="anchor" name="secure-communications-end-to-end-for-spring-boot-apps-in-a-zero-trust-environment"&gt;&lt;/a&gt;Secure communications end-to-end for Spring Boot apps - in a Zero Trust environment&lt;/h1&gt;
+&lt;p&gt;Hi, Spring fans! Today, we are excited to announce the general availability of all the features to secure communications end-to-end for Spring Boot apps ? in a Zero Trust environment. You can secure communications end-to-end or terminate transport level security at any communication point for Spring Boot apps. You can also automate the provisioning and configuration for all the Azure resources needed for securing communications.&lt;/p&gt;
+&lt;p&gt;Implementing secure communications as part of your solution architecture can be challenging. Many customers manually rotate their certificates or create their own solutions to automate provisioning and configuration. Even then, there is still data exfiltration risk ? say unauthorized copying or transfer of data from server systems. With Azure Spring Cloud, all of this is handled for you; there is no need to figure out the difficult details. Azure Spring Cloud abstracts away most of the complexity, leaving secure communications as configurable and automatable options in the service.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;¡°Implementing end-to-end encryption and Zero Trust have been at the top of the list of security requirements for our new API platform. Neither requirement was ever achievable on our old platform. Azure Spring Cloud, and its built-in integrations with services like Azure Key Vault and Managed Identities, will finally help us to meet those requirements in an easily automated and manageable way.¡± ? Claus Lund, Infrastructure Engineering Lead, &lt;a href="https://www.nationallife.com/"&gt;National Life Group&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;¡°For Liantis, having secure end-to-end communications is a non-negotiable in our line of business dealing with very sensitive financial, medical and payroll data. Again, Azure Spring Cloud delivers on its promise to abstract most of the complexity, reduce operational overhead associated with certificate provisioning, configuration and certificate rotation in a seamless way using a simple and straightforward integration with Azure Key Vault.¡± - Kurt Roggen, Infrastructure and Security Architect, &lt;a href="https://www.liantis.be/nl?overlay=select-language"&gt;Liantis&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;&lt;h2&gt;&lt;a href="#secure-internet-communications" class="anchor" name="secure-internet-communications"&gt;&lt;/a&gt;Secure Internet communications&lt;/h2&gt;
+&lt;p&gt;The TLS/SSL protocol establishes identity and trust, and encrypts communications of all types, making secure communications possible - particularly Web traffic carrying commerce data and personally identifiable information.&lt;/p&gt;
+&lt;p&gt;You can use any types of SSL certificates ? certificates issued by a certificate authority, extended validation certificate, wildcard certificates with support for any number of sub domains, or self-signed certificates for dev and testing environments.&lt;/p&gt;&lt;h2&gt;&lt;a href="#zero-trust-securely-load-certificates" class="anchor" name="zero-trust-securely-load-certificates"&gt;&lt;/a&gt;Zero Trust ? securely load certificates&lt;/h2&gt;
+&lt;p&gt;Based on the principle of &amp;ldquo;never trust, always verify and credential-free&amp;rdquo;, &lt;a href="https://docs.microsoft.com/en-us/security/zero-trust/"&gt;Zero Trust&lt;/a&gt; helps to secure all communications by eliminating unknown and un-managed certificates, and only trusts certificates that are shared by verifying identity prior to granting access to those certificates. &lt;/p&gt;
+&lt;p&gt;To securely load certificates from &lt;a href="https://docs.microsoft.com/en-us/azure/key-vault/"&gt;Azure Key Vault&lt;/a&gt;, Spring Boot apps use &lt;a href="https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview"&gt;managed identities&lt;/a&gt; and &lt;a href="https://docs.microsoft.com/en-us/azure/role-based-access-control/"&gt;Azure role-based access control&lt;/a&gt;, and Azure Spring Cloud uses a provider service principal and Azure role-based access control. This secure loading is powered using the Azure Key Vault &lt;a href="https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/keyvault/azure-security-keyvault-jca"&gt;JCA&lt;/a&gt; (Java Cryptography Architecture) Provider.&lt;/p&gt;
+&lt;p&gt;With Azure Key Vault:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;You control the storage and distribution of certificates to reduce accidental leakage.&lt;/li&gt;
+  &lt;li&gt;Applications and services can securely access certificates. Key Vault uses Azure role-based access control to lock down access to only those requiring access, such as an admin of course, but also for apps using the principle of least privilege. Applications and service authenticate and authorize, using Azure Active Directory and Azure role-based access control, to access certificates.&lt;/li&gt;
+  &lt;li&gt;You can monitor the access and use of certificates in Key Vault through its full audit trail.&lt;/li&gt;
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#secure-communications-end-to-end-or-terminate-tls-at-any-point" class="anchor" name="secure-communications-end-to-end-or-terminate-tls-at-any-point"&gt;&lt;/a&gt;Secure communications end-to-end or terminate TLS at any point&lt;/h2&gt;
+&lt;p&gt;As illustrated in the diagram below, there are several segments of communications through:&lt;br/&gt;* Network access points such as Azure Front Door, Azure App Gateway, F5 BIG-IP Local Traffic Manager, Azure API Management and Apigee API Management&lt;br/&gt;* Spring Boot apps and&lt;br/&gt;* Backend systems such as databases, messaging and eventing systems and app cache.&lt;/p&gt;
+&lt;p&gt;You can secure communications end-to-end or terminate transport level security at any communication point for Spring Boot apps.&lt;/p&gt;
+&lt;img src="https://github.com/joshlong/blog-images/raw/master/secure-e2e/secure-communications-end-to-end-for-spring-boot-apps.jpg" /&gt;&lt;h3&gt;&lt;a href="#securing-communications-into-azure-spring-cloud" class="anchor" name="securing-communications-into-azure-spring-cloud"&gt;&lt;/a&gt;Securing communications into Azure Spring Cloud&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Segment 1&lt;/strong&gt; represents securing communications from consumers - like browsers, mobile phones, desktops, kiosks, or network access points like Azure Front Door, Azure App Gateway, F5 BIG-IP Local Traffic Manager, Azure API Management and Apigee API Management - to the ingress controller in Azure Spring Cloud. &lt;/p&gt;
+&lt;p&gt;By default, segment 1 is secured using a Microsoft supplied SSL certificate for the *.azuremicroservices.io domain. You can apply your own SSL certificate in Azure Key Vault by binding a custom domain to your app in Azure Spring Cloud. No code is necessary.&lt;/p&gt;&lt;h3&gt;&lt;a href="#securing-communications-from-ingress-controller-to-apps" class="anchor" name="securing-communications-from-ingress-controller-to-apps"&gt;&lt;/a&gt;Securing communications from ingress controller to apps&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Segment 2&lt;/strong&gt; represents securing communications from Azure Spring Cloud¡¯s ingress controller to any app on Azure Spring Cloud. You can enable &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/how-to-enable-end-to-end-tls"&gt;TLS/SSL to secure traffic from the ingress controller to an app&lt;/a&gt; that supports HTTPS. &lt;/p&gt;
+&lt;p&gt;A Spring Boot app can use Spring¡¯s approach to enable HTTPS or secure communications by using the &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault-certificates#enable-the-spring-boot-app-to-load-the-tlsssl-certificate"&gt;Azure Key Vault Certificates Spring Boot Starter&lt;/a&gt; ? in three configuration steps to secure communications using an SSL certificate from an Azure Key Vault. No code is necessary.&lt;/p&gt;
+&lt;p&gt;Step 1 ? Include the Azure Key Vault Certificates Spring Boot Starter:&lt;/p&gt;
+&lt;img src="https://github.com/joshlong/blog-images/raw/master/secure-e2e/azure-spring-boot-starter-keyvault-certificates-dependency.jpg" /&gt;
+&lt;p&gt;Step 2 ? Configure an app to load an SSL certificate from Azure Key Vault by specifying the URI of the Azure Key Vault and the certificate name:&lt;/p&gt;
+&lt;img src="https://github.com/joshlong/blog-images/raw/master/secure-e2e/configure-spring-boot-app-to-load-SSL-certificate.jpg" /&gt;
+&lt;p&gt;Step 3 ? Enable the app¡¯s &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/how-to-enable-system-assigned-managed-identity"&gt;managed identity&lt;/a&gt; and grant the managed identity with &amp;ldquo;Get&amp;rdquo; and &amp;ldquo;List&amp;rdquo; access to the Azure Key Vault&lt;/p&gt;&lt;h3&gt;&lt;a href="#securing-communications-from-app-to-managed-middleware" class="anchor" name="securing-communications-from-app-to-managed-middleware"&gt;&lt;/a&gt;Securing communications from app to managed middleware&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Segment 3&lt;/strong&gt; represents communications from any app to the managed Spring Cloud Config Server and Spring Cloud Service Registry in Azure Spring Cloud. By default, segment 3 is secured using a Microsoft supplied SSL certificate.&lt;/p&gt;&lt;h3&gt;&lt;a href="#securing-app-to-app-communications" class="anchor" name="securing-app-to-app-communications"&gt;&lt;/a&gt;Securing app to app communications&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Segment 4&lt;/strong&gt; represents communications between an app to another app in Azure Spring Cloud. &lt;/p&gt;
+&lt;p&gt;You can configure the caller app using the Azure Key Vault Certificates Spring Boot Starter to trust the SSL certificate supplied by an HTTPS-enabled called app. &lt;/p&gt;
+&lt;p&gt;The receiver Spring Boot app can use Spring¡¯s approach to enable HTTPS or secure communications by using the Azure Key Vault Certificates Spring Boot Starter.&lt;/p&gt;&lt;h3&gt;&lt;a href="#securing-app-to-external-system-communications" class="anchor" name="securing-app-to-external-system-communications"&gt;&lt;/a&gt;Securing app to external system communications&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Segment 5&lt;/strong&gt; represents communications between an app running in Azure Spring Cloud and external systems. You can configure the app running in Azure Spring Cloud to trust the SSL certificate supplied by any external systems - using the &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault-certificates#run-a-spring-boot-application-with-secure-outbound-connections"&gt;Azure Key Vault Certificates Spring Boot Starter&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#implicitly-load-ssl-certificates-from-key-vault-into-an-app" class="anchor" name="implicitly-load-ssl-certificates-from-key-vault-into-an-app"&gt;&lt;/a&gt;Implicitly load SSL certificates from Key Vault into an app&lt;/h3&gt;
+&lt;p&gt;If your Spring code, Java code, or open-source libraries, such as openssl, rely on the JVM default JCA chain to implicitly load certificates into the JVM¡¯s trust store, then you &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/how-to-use-tls-certificate#import-a-certificate"&gt;can import your SSL certificates from Key Vault&lt;/a&gt; into Azure Spring Cloud and use those certificates within the app.&lt;/p&gt;&lt;h3&gt;&lt;a href="#upload-well-known-public-ssl-certificates-for-backend-systems" class="anchor" name="upload-well-known-public-ssl-certificates-for-backend-systems"&gt;&lt;/a&gt;Upload well known public SSL certificates for backend systems&lt;/h3&gt;
+&lt;p&gt;For an app to communicate to backend services in the cloud or in on premises systems, it may require the use of public SSL certificates to secure communication. You can upload &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/how-to-use-tls-certificate"&gt;those SSL certificates&lt;/a&gt; for securing outbound communications.&lt;/p&gt;&lt;h2&gt;&lt;a href="#automate-provisioning-and-configuration-for-securing-communications" class="anchor" name="automate-provisioning-and-configuration-for-securing-communications"&gt;&lt;/a&gt;Automate provisioning and configuration for securing communications&lt;/h2&gt;
+&lt;p&gt;Using an ARM Template, Bicep, or Terraform, you can automate the provisioning and configuration of all the Azure resources mentioned above for securing communications.&lt;/p&gt;&lt;h2&gt;&lt;a href="#build-your-solutions-and-secure-communications-today" class="anchor" name="build-your-solutions-and-secure-communications-today"&gt;&lt;/a&gt;Build your solutions and secure communications today!&lt;/h2&gt;
+&lt;p&gt;Azure Spring Cloud is a fully managed service for Spring Boot applications. It abstracts away the complexity of infrastructure and Spring Cloud middleware management from users. So, you can focus on building your business logic and let Azure take care of dynamic scaling, patches, security, compliance, and high availability. With a few steps, you can provision Azure Spring Cloud, create applications, deploy, and scale Spring Boot applications, and start securing communications in minutes.&lt;/p&gt;
+&lt;p&gt;Azure Spring Cloud is jointly built, operated, and supported by Microsoft and VMware.&lt;br/&gt;We will continue to bring more developer-friendly and enterprise-ready features to Azure Spring Cloud. We would love to hear how you are building impactful solutions using Azure Spring Cloud&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Deploy Spring Boot apps to Azure Spring Cloud and secure communications end-to-end!&lt;/p&gt;
+&lt;p&gt;Get started today&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Learn using an &lt;a href="https://docs.microsoft.com/en-us/learn/modules/azure-spring-cloud-workshop/"&gt;MS Learn module&lt;/a&gt; or &lt;a href="https://github.com/microsoft/azure-spring-cloud-training"&gt;self-paced workshop&lt;/a&gt; on GitHub&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/Azure-Samples/spring-petclinic-microservices"&gt;Deploy&lt;/a&gt; a distributed version of Spring Petclinic application&lt;/li&gt;
+  &lt;li&gt;Learn &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/"&gt;more&lt;/a&gt; about implementing solutions on Azure Spring Cloud&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Secure communications end-to-end for Spring Boot apps&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/tutorial-custom-domain?tabs=Azure-portal"&gt;Bind custom domain to an app in Azure Spring Cloud&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/how-to-enable-end-to-end-tls"&gt;Secure traffic from ingress controller to an app in Azure Spring Cloud&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault-certificates#enable-the-spring-boot-app-to-load-the-tlsssl-certificate"&gt;Azure Key Vault Certificates Spring Boot Starter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/spring/azure-spring-boot-starter-keyvault-certificates"&gt;Azure Key Vault Certificates Spring Boot Starter (GitHub.com)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Azure Key Vault &lt;a href="https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/keyvault/azure-security-keyvault-jca"&gt;JCA&lt;/a&gt; (Java Cryptography Architecture) Provider&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additional Resources&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Deploy Spring Boot applications by leveraging enterprise best practices ? &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/reference-architecture"&gt;Azure Spring Cloud Reference Architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Migrate your &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-boot-to-azure-spring-cloud"&gt;Spring Boot&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud"&gt;Spring Cloud&lt;/a&gt;, and &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-tomcat-to-azure-spring-cloud"&gt;Tomcat&lt;/a&gt; applications to Azure Spring Cloud&lt;/li&gt;
+  &lt;li&gt;Wire Spring applications to interact with Azure services&lt;/li&gt;
+  &lt;li&gt;For feedback and questions, &lt;a href="mailto:AzureSpringCloud-Talk@service.microsoft.com"&gt;please e-mail us&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Cloud Gateway and gRPC</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/12/08/spring-cloud-gateway-and-grpc" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Alberto C. R?os</name>
+    </author>
+    <id>tag:spring.io,2021-12-06:4632</id>
+    <updated>2021-12-08T17:00:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Starting from version 3.1.0 as part of the Spring Cloud 2021.0.0 (aka Jubilee) release train, Spring Cloud Gateway included support for gRPC and HTTP/2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We will introduce the basic concepts behind gRPC and how to configure it with two examples:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;One that showcases how Spring Cloud Gateway can transparently re-route gRPC traffic without needing to know the proto definition and without having to modify our existing gRPC servers.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Another that showcases how we can create a custom filter in Spring Cloud Gateway to transform a JSON payload to a gRPC message.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="introduction-to-grpc-and-http2"&gt;&lt;a class="anchor" href="#introduction-to-grpc-and-http2"&gt;&lt;/a&gt;Introduction to gRPC and HTTP/2&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;HTTP/2 makes our applications faster, simpler, and more robust. Reducing latency by enabling request and response
+multiplexing, adding efficient compression of HTTP header fields, and adding support for request prioritization and
+server push.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The reduction in the number of connections is particularly important when improving the performance of HTTPS: that way
+we have less expensive TLS handshakes, more efficient session reuse, reducing client and server resources.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;HTTP/2 provides two mechanisms for negotiating the application level protocol:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;H2C&lt;/code&gt; HTTP/2.0 support with clear-text&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;H2&lt;/code&gt; HTTP/2.0 support with TLS&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Even though &lt;code&gt;reactor-netty&lt;/code&gt; has support for &lt;code&gt;H2C&lt;/code&gt; clear-text protocol, Spring Cloud Gateway requires &lt;code&gt;H2&lt;/code&gt; with TLS to
+assure transport security.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;HTTP/2 adds a binary framing layer, which is how the HTTP messages are encapsulated and transferred between the client
+and server, enabling more efficient ways to transfer data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Thanks to &lt;a href="https://github.com/reactor/reactor-netty"&gt;reactor-netty&lt;/a&gt; and its HTTP/2 support, we were able to extend
+Spring Cloud Gateway to support gRPC.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://grpc.io/"&gt;gRPC&lt;/a&gt; is a high-performance Remote Procedure Call framework that can run in any environment. It
+provides bi-directional streaming, and it&amp;#8217;s based on HTTP/2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;gRPC services can be defined using Protocol Buffers, a powerful binary serialization toolset and language, and
+provides tools for generating clients and servers across different languages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="getting-started"&gt;&lt;a class="anchor" href="#getting-started"&gt;&lt;/a&gt;Getting started&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In order to enable gRPC in Spring Cloud Gateway, we need to enable HTTP/2 and SSL in our project &lt;a href="https://docs.oracle.com/cd/E19830-01/819-4712/ablqw/index.html"&gt;by adding a keystore&lt;/a&gt;, this can be done
+through configuration by adding the following:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="yaml"&gt;server:
+  http2:
+    enabled: true
+  ssl:
+    key-store-type: PKCS12
+    key-store: classpath:keystore.p12
+    key-store-password: password
+    key-password: password
+    enabled: true&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Now that we have it enabled, we can create a route that redirects traffic to a gRPC server and take advantage of the
+existing filters and predicates, for example, this route will redirect traffic that comes from any path starting
+with &lt;code&gt;grpc&lt;/code&gt; to a local server in the port &lt;code&gt;6565&lt;/code&gt; and add header &lt;code&gt;X-Request-header&lt;/code&gt; with the value &lt;code&gt;header-value&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="yaml"&gt;spring:
+  cloud:
+    gateway:
+      routes:
+        - id: grpc
+          uri: https://localhost:6565
+          predicates:
+            - Path=/grpc/**
+          filters:
+            - AddResponseHeader=X-Request-header, header-value&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="running-grpc-to-grpc"&gt;&lt;a class="anchor" href="#running-grpc-to-grpc"&gt;&lt;/a&gt;Running gRPC to gRPC&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;An end to end example can be found in this repository with the following parts:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="imageblock"&gt;
+&lt;div class="content"&gt;
+&lt;img src="https://raw.githubusercontent.com/Albertoimpl/spring-cloud-gateway-grpc/main/grpc-simple-gateway.png" alt="grpc-simple-gateway"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;code&gt;grpc-server&lt;/code&gt; that exposes a &lt;code&gt;HelloService&lt;/code&gt;, and gRPC endpoint to receive a &lt;code&gt;HelloRequest&lt;/code&gt; and return
+a &lt;code&gt;HelloResponse&lt;/code&gt;:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre&gt;syntax = "proto3";
+
+message HelloRequest {
+  string firstName = 1;
+  string lastName = 2;
+}
+
+message HelloResponse {
+  string greeting = 1;
+}
+
+service HelloService {
+  rpc hello(HelloRequest) returns (HelloResponse);
+}&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The server will concatenate a salutation with &lt;code&gt;firstName&lt;/code&gt; and a &lt;code&gt;lastName&lt;/code&gt; and respond with a &lt;code&gt;greeting&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For example, this input:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="text"&gt;firstName: Saul
+lastName: Hudson&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Will output:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="text"&gt;greeting: Hello, Saul Hudson&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A &lt;code&gt;grpc-client&lt;/code&gt;, in charge of sending the &lt;code&gt;HelloRequest&lt;/code&gt; to the &lt;code&gt;HelloService&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;grpc-simple-gateway&lt;/code&gt; that routes the requests and adds a header with the configuration mentioned above. Note that this gateway application does not have any dependency to gRPC nor to the proto definition used by client and server.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;At the moment there is just one route that will forward everything to the &lt;code&gt;grpc-server&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="yaml"&gt;      routes:
+        - id: grpc
+          uri: https://localhost:6565
+          predicates:
+            - Path=/**
+          filters:
+            - AddResponseHeader=X-Request-header, header-value&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;To start the server that is going to be listening to requests:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="shell"&gt; ./gradlew :grpc-server:bootRun&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Then, we start the gateway that is going to re-route the gRPC requests:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="shell"&gt;./gradlew :grpc-simple-gateway:bootRun&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Finally, we can use the client that points to the gateway application:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="shell"&gt;./gradlew :grpc-client:bootRun&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The gateway routes and filters can be modified in &lt;a href="https://github.com/Albertoimpl/spring-cloud-gateway-grpc/blob/5bf80a24a8adf0d5d7c1614524f9d55707536c19/grpc-simple-gateway/src/main/resources/application.yaml#L14"&gt;grpc-simple-gateway/src/main/resources/application.yaml&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="running-json-to-grpc-with-a-custom-filter"&gt;&lt;a class="anchor" href="#running-json-to-grpc-with-a-custom-filter"&gt;&lt;/a&gt;Running JSON to gRPC with a custom filter&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Thanks to Spring Cloud Gateway flexibility, it is possible to create a custom filter to transform from a JSON payload to
+a gRPC message.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Even though it will have a performance impact since we have to serialize and deserialize the requests in the gateway and creating a channel from it,
+it is a common pattern if you want to expose a JSON API while maintaining internal compatibility.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For that, we can extend our &lt;code&gt;grpc-json-gateway&lt;/code&gt; to include the &lt;code&gt;proto&lt;/code&gt; definition with the message we want to send.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="imageblock"&gt;
+&lt;div class="content"&gt;
+&lt;img src="https://raw.githubusercontent.com/Albertoimpl/spring-cloud-gateway-grpc/main/grpc-json-gateway.png" alt="grpc-json-gateway"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Cloud Gateway contains a mechanism to create custom filters allowing us to intercept requests and add custom logic to them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For this particular scenario, we are going to deserialize the JSON request and create a gRPC channel that will send a message to the &lt;code&gt;grpc-server&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="java"&gt;static class GRPCResponseDecorator extends ServerHttpResponseDecorator {
+
+  @Override
+  public Mono&amp;lt;Void&amp;gt; writeWith(Publisher&amp;lt;?extends DataBuffer&amp;gt; body) {
+    exchange.getResponse().getHeaders().set("Content-Type", "application/json");
+
+    URI requestURI = exchange.getRequest().getURI();
+    ManagedChannel channel = createSecuredChannel(requestURI.getHost(), 6565);
+
+    return getDelegate().writeWith(deserializeJSONRequest()
+            .map(jsonRequest -&amp;gt; {
+                String firstName = jsonRequest.getFirstName();
+                String lastName = jsonRequest.getLastName();
+                return HelloServiceGrpc.newBlockingStub(channel)
+                        .hello(HelloRequest.newBuilder()
+                                .setFirstName(firstName)
+                                .setLastName(lastName)
+                                .build());
+            })
+            .map(this::serialiseJSONResponse)
+            .map(wrapGRPCResponse())
+            .cast(DataBuffer.class)
+            .last());
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The full implementation can be found
+in: &lt;a href="https://github.com/Albertoimpl/spring-cloud-gateway-grpc/blob/5bf80a24a8adf0d5d7c1614524f9d55707536c19/grpc-json-gateway/src/main/java/com/example/grpcserver/hello/JSONToGRPCFilterFactory.java#L38"&gt;grpc-json-gateway/src/main/java/com/example/grpcserver/hello/JSONToGRPCFilterFactory.java&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Using the same &lt;code&gt;grpc-server&lt;/code&gt;, we can start the gateway with the custom filter with:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="shell"&gt;./gradlew :grpc-json-gateway:bootRun&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;And send JSON requests to the &lt;code&gt;grpc-json-gateway&lt;/code&gt; using, for example, &lt;code&gt;curl&lt;/code&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="bash"&gt;curl -XPOST 'https://localhost:8091/json/hello' -d '{"firstName":"Duff","lastName":"McKagan"}' -k -H"Content-Type: application/json" -v&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We see how the gateway application forwards the requests and returns the JSON payload with the new &lt;code&gt;Content-Type&lt;/code&gt; header:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code data-lang="bash"&gt;&amp;lt; HTTP/2 200
+&amp;lt; content-type: application/json
+&amp;lt; content-length: 34
+&amp;lt;
+* Connection #0 to host localhost left intact
+{"greeting":"Hello, Duff McKagan"}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="next-steps"&gt;&lt;a class="anchor" href="#next-steps"&gt;&lt;/a&gt;Next Steps&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;In this post, we&amp;#8217;ve looked at a few examples of how gRPC can be integrated within Spring Cloud Gateway. I¡¯d love to know
+what other usages you&amp;#8217;ve found to be helpful in your experiences.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - December 7th, 2021</title>
     <link rel="alternate" href="https://spring.io/blog/2021/12/07/this-week-in-spring-december-7th-2021" />
@@ -1068,94 +1496,6 @@ We&amp;#8217;re currently working with Sonatype to investigate options to potent
 &lt;p&gt;In my experience, the first thing I tried to do when I got into Kubernetes was to deploy a stateless microservice using Spring Boot. I knew that these kinds of stateless microservices were the happy path for Kubernetes, and I didn&amp;rsquo;t want to go uphill. This experience was satisfying and got me hooked. &amp;ldquo;This thing has potential!&amp;rdquo; I exclaimed. Then I spent time trying to optimize for stateless microservices. I learned Istio, KNative, and so on. The Tanzu Application Platform seems like the best fit for deploying applications of all the things I&amp;rsquo;ve learned. (I only wish it&amp;rsquo;d existed then as it does now! I would&amp;rsquo;ve undoubtedly saved myself scads of time!)&lt;/p&gt;
 &lt;p&gt;Then, I wondered how I would get my data on the platform. And that&amp;rsquo;s where the optimism dwindles. 90% of my journey on Kubernetes has been figuring out how to make infrastructure work reliably on the platform. Things like message queues, databases, and more. It took learning how to work with Helm charts, operators, and StatefulSets before I started even understanding the problem space. If I had to do it over again, I&amp;rsquo;d spend less time treading water with microservices and dive almost immediately into getting my favorite database working reliably. Start small. Then learn Helm. Then discover the operator pattern. Once you&amp;rsquo;ve got those arrows in your quill, anything&amp;rsquo;s possible. Then the force-multiplying effect of composition and reuse starts to kick in at the platform level. &lt;/p&gt;
 &lt;p&gt;In this post, we&amp;rsquo;ve looked at a few operators that I found pleasant enough to use and powerful enough to be worth using. I&amp;rsquo;d love to know what other operators you&amp;rsquo;ve found to be helpful in your experiences.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring AMQP (Spring for RabbitMQ) 2.4 is Now Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/11/18/spring-amqp-spring-for-rabbitmq-2-4-is-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Gary Russell</name>
-    </author>
-    <id>tag:spring.io,2021-11-18:4616</id>
-    <updated>2021-11-19T01:36:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;I am pleased to announce that Spring AMQP 2.4.0 is now available.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="notable-changes"&gt;&lt;a class="anchor" href="#notable-changes"&gt;&lt;/a&gt;Notable Changes&lt;/h3&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Initial support for the &lt;a href="https://docs.spring.io/spring-amqp/docs/2.8.x/reference/html/#stream-support"&gt;RabbitMQ Stream Plugin&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Support for remoting using Spring Framework&amp;#8217;s RMI support is deprecated&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For information about all changes in this release, see &lt;a href="https://docs.spring.io/spring-amqp/docs/2.4.x/reference/html/#whats-new-part"&gt;What&amp;#8217;s New&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-amqp/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-amqp"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-amqp/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-amqp/docs/2.4.x/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-amqp"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-amqp"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring for Apache Kafka 2.8 is Now Available</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/11/18/spring-for-apache-kafka-2-8-is-now-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Gary Russell</name>
-    </author>
-    <id>tag:spring.io,2021-11-18:4615</id>
-    <updated>2021-11-19T01:28:00Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;I am pleased to announce that Spring for Apache Kafka 2.8.0 is now available.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect2"&gt;
-&lt;h3 id="notable-changes"&gt;&lt;a class="anchor" href="#notable-changes"&gt;&lt;/a&gt;Notable Changes&lt;/h3&gt;
-&lt;div class="ulist"&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;This version uses the 3.0.0 &lt;code&gt;kafka-clients&lt;/code&gt; version&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Out of order manual commits are now supported&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The same container factory can now be used for both batch and record listeners&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Separate record and batch error handlers have been replaced with common error handlers&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;KafkaTemplate&lt;/code&gt; can now be used to receive specific records from known partitions/offsets&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;For information about all changes in this release, see &lt;a href="https://docs.spring.io/spring-kafka/docs/2.8.x/reference/html/#whats-new-part"&gt;What&amp;#8217;s New&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-kafka/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-kafka/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-kafka/docs/2.8.x/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-kafka"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-kafka"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Fellow Java Champion Kate Stanley on Kubernetes and Apache Kafka</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/11/18/a-bootiful-podcast-fellow-java-champion-kate-stanley-on-kubernetes-and-apache-kafka" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-11-19:4618</id>
-    <updated>2021-11-18T21:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of A Bootiful Podcast! This week - a week before Thanksgiving here in the US - &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; wants you to know he and the Spring team are_thankful_ for you, and then he talks to newly minted Java Champion and Java ecosystem legend &lt;a href="https://twitter.com/KateStanley91"&gt;Kate Stanley (@KateStanley91)&lt;/a&gt; about Kubernetes and Apache Kafka.&lt;/p&gt;
-&lt;iframe title="Fellow Java Champion Kate Stanley on Kubernetes and Apache Kafka " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=3fzs9-1136033-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;btn-skin=7"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>

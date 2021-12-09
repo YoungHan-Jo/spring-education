@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.domain.MemberVO;
 import com.example.service.MemberService;
 import com.example.util.JScript;
-import com.mysql.cj.Session;
 
 @Controller
 @RequestMapping("/member/*")
@@ -189,14 +188,8 @@ public class MemberController {
 	public ResponseEntity<String> memberModify(MemberVO memberVO,
 			HttpSession session) {
 		
-		System.out.println("id 추가 전 memberVO : " + memberVO);
-		
 		String id = (String) session.getAttribute("id");
 		memberVO.setId(id);
-		
-		System.out.println("id 추가 후 memberVO : " + memberVO);
-		
-		System.out.println("가져온 id : " + memberVO.getId());
 		
 		MemberVO dbMemberVO =  memberService.getMemberById(memberVO.getId());
 		
