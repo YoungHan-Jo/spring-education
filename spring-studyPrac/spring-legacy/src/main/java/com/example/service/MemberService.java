@@ -30,4 +30,12 @@ public class MemberService {
 		memberMapper.modifyMember(memberVO);
 	}
 	
+	public void modifyPasswd(String id, String passwd) {
+		memberMapper.modifyPasswd(id, passwd);
+	}
+	
+	public void deleteMember(String id) {
+		memberMapper.deleteMember(id);
+	}
+	
 }
